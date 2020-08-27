@@ -13,5 +13,4 @@ node_modules/
 distr/
 
 # Файлы сборки
-public/bundle.js
 public/bundle.js.map
