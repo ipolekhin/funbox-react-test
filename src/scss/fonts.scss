@@ -1,0 +1,23 @@
+//Шрифты
+@font-face {
+  font-family: "Trebuchet";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/TrebuchetMS.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Trebuchet";
+  font-style: normal;
+  font-weight: bold;
+  font-display: swap;
+  src: url("../fonts/TrebuchetMS-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Exo";
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/Exo2.0-Thin.otf") format("opentype");
+}

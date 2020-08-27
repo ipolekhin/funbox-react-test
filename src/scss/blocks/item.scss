@@ -1,0 +1,205 @@
+.item__description {
+  position: relative;
+
+  padding: 20px 48px;
+  width: 320px;
+  height: 480px;
+
+  background: linear-gradient(135deg, transparent 40px, $white-two 0);
+  box-shadow: red;
+  border: 4px solid $blue;
+  border-radius: 8px;
+  border-top: 0 !important;
+  border-left: 0 !important;
+
+  cursor: pointer;
+  overflow: hidden;
+
+  p {
+    margin: 0;
+    max-width: 210px;
+
+    color: $color-base;
+  }
+
+  .item__weight {
+    color: $white-two;
+  }
+
+  &:hover {
+    border: 4px solid $blueHover;
+
+    .item__weight,
+    .item__border-modify,
+    .item__border-modify::before,
+    .item__border-modify::after {
+      background-color: $blueHover;
+    }
+  }
+
+  &--disable {
+    border: 4px solid $gray;
+
+    cursor: default;
+
+    &::after {
+      opacity: 50%;
+    }
+
+    p:not(.item__weight), .item__title {
+      opacity: 50%;
+    }
+
+    .item__weight,
+    .item__border-modify,
+    .item__border-modify::before,
+    .item__border-modify::after {
+      background-color: $gray;
+    }
+
+    &:hover {
+      border: 4px solid $gray;
+
+      .item__weight,
+      .item__border-modify,
+      .item__border-modify::before,
+      .item__border-modify::after {
+        background-color: $gray;
+      }
+    }
+
+    & + .products__text {
+      color: $yellow;
+    }
+  }
+
+  &--select {
+    border: 4px solid $pink !important;
+    border-top: 0 !important;
+    border-left: 0 !important;
+
+    .item__weight,
+    .item__border-modify,
+    .item__border-modify::before,
+    .item__border-modify::after {
+      background-color: $pink !important;
+    }
+  }
+
+  &--selected {
+    border: 4px solid $pink;
+
+    &:hover {
+      border: 4px solid $pinkHover;
+
+      .item__weight,
+      .item__border-modify,
+      .item__border-modify::before,
+      .item__border-modify::after {
+        background-color: $pinkHover;
+      }
+
+      & > .item__header-text {
+        color: $pink;
+      }
+    }
+
+    .item__weight,
+    .item__border-modify,
+    .item__border-modify::before,
+    .item__border-modify::after {
+      background-color: $pink;
+    }
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -91px;
+    left: -24px;
+
+    width: 100%;
+    height: 100%;
+
+    background: url('../img/funbox-cat.png') no-repeat bottom left;
+
+    z-index: 10;
+  }
+}
+
+.item__border-modify {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 4px;
+  height: 428px;
+  background-color: $blue;
+  border-top-left-radius: 8px;
+
+  z-index: 11;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -65px;
+    left: 25px;
+    width: 5px;
+    height: 86px;
+    background-color: $blue;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: -48px;
+    left: 51px;
+    width: 268px;
+    height: 4px;
+    background-color: $blue;
+    border-top-left-radius: 8px;
+  }
+}
+
+.item__title {
+  margin: 6px 0 10px;
+
+  font-size: $largeFontSize;
+  font-weight: bold;
+
+  span {
+    display: block;
+
+    font-size: $largeFontSize / 2;
+  }
+}
+
+.item__weight {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+
+  padding: 20px 0;
+  width: 80px;
+  height: 80px;
+
+  font-size: 42px;
+  line-height: 22px;
+  text-align: center;
+
+  background-color: $blue;
+  border-radius: 50%;
+
+  z-index: 11;
+
+  span {
+    display: block;
+    margin-top: 6px;
+    width: 100%;
+
+    font-size: $baseFontSize + 5;
+  }
+}
