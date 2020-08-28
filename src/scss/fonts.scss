@@ -1,18 +1,24 @@
 //Шрифты
 @font-face {
-  font-family: "Trebuchet";
+  font-family: "Trebuchet MS";
   font-style: normal;
-  font-weight: 400;
+  font-weight: normal;
   font-display: swap;
-  src: url("../fonts/TrebuchetMS.ttf") format("truetype");
+  src: local('Trebuchet MS'), local('TrebuchetMS'),
+      url('../fonts/TrebuchetMS.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/TrebuchetMS.woff') format('woff'),
+      url('../fonts/TrebuchetMS.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Trebuchet";
+  font-family: "Trebuchet MS";
   font-style: normal;
   font-weight: bold;
   font-display: swap;
-  src: url("../fonts/TrebuchetMS-Bold.ttf") format("truetype");
+  src: local('Trebuchet MS'), local('TrebuchetMS'),
+  url('../fonts/TrebuchetMS-Bold.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/TrebuchetMS-Bold.woff') format('woff'),
+  url('../fonts/TrebuchetMS-Bold.ttf') format('truetype');
 }
 
 @font-face {
