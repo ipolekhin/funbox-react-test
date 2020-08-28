@@ -5,9 +5,9 @@
   width: 320px;
   height: 480px;
 
-  background: linear-gradient(135deg, transparent 40px, $white-two 0);
+  background: linear-gradient(135deg, transparent 32px, $white-two 0);
   border: 4px solid $blue;
-  border-radius: 8px;
+  border-radius: 12px;
   border-top: 0 !important;
   border-left: 0 !important;
 
@@ -29,10 +29,17 @@
     border: 4px solid $blueHover;
 
     .item__weight,
-    .item__border-modify,
-    .item__border-modify::before,
-    .item__border-modify::after {
+    .item__border-modify::before
+    {
       background-color: $blueHover;
+    }
+
+    .item__border-modify {
+      border-left: 4px solid $blueHover;
+    }
+
+    .item__border-modify::after {
+      border-top: 4px solid $blueHover;
     }
   }
 
@@ -50,20 +57,32 @@
     }
 
     .item__weight,
-    .item__border-modify,
-    .item__border-modify::before,
-    .item__border-modify::after {
+    .item__border-modify::before {
       background-color: $gray;
+    }
+
+    .item__border-modify {
+      border-left: 4px solid $gray;
+    }
+
+    .item__border-modify::after {
+      border-top: 4px solid $gray;
     }
 
     &:hover {
       border: 4px solid $gray;
 
       .item__weight,
-      .item__border-modify,
-      .item__border-modify::before,
-      .item__border-modify::after {
+      .item__border-modify::before {
         background-color: $gray;
+      }
+
+      .item__border-modify {
+        border-left: 4px solid $gray;
+      }
+
+      .item__border-modify::after {
+        border-top: 4px solid $gray;
       }
     }
 
@@ -78,10 +97,16 @@
     border-left: 0 !important;
 
     .item__weight,
-    .item__border-modify,
-    .item__border-modify::before,
-    .item__border-modify::after {
+    .item__border-modify::before {
       background-color: $pink !important;
+    }
+
+    .item__border-modify {
+      border-left: 4px solid $pink !important;
+    }
+
+    .item__border-modify::after {
+      border-top: 4px solid $pink !important;
     }
   }
 
@@ -92,10 +117,16 @@
       border: 4px solid $pinkHover;
 
       .item__weight,
-      .item__border-modify,
-      .item__border-modify::before,
-      .item__border-modify::after {
+      .item__border-modify::before {
         background-color: $pinkHover;
+      }
+
+      .item__border-modify {
+        border-left: 4px solid $pinkHover;
+      }
+
+      .item__border-modify::after {
+        border-top: 4px solid $pinkHover;
       }
 
       & > .item__header-text {
@@ -104,10 +135,16 @@
     }
 
     .item__weight,
-    .item__border-modify,
-    .item__border-modify::before,
-    .item__border-modify::after {
+    .item__border-modify::before {
       background-color: $pink;
+    }
+
+    .item__border-modify {
+      border-left: 4px solid $pink;
+    }
+
+    .item__border-modify::after {
+      border-top: 4px solid $pink;
     }
   }
 
@@ -131,35 +168,42 @@
   position: absolute;
   bottom: 0;
   left: 0;
+
+  padding-right: 4px;
   width: 4px;
-  height: 428px;
-  background-color: $blue;
-  border-top-left-radius: 8px;
+  height: 434px;
+
+  border-left: 4px solid $blue;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 12px;
 
   z-index: 11;
 
   &::before {
     content: '';
     position: absolute;
-    top: -65px;
-    left: 25px;
-    width: 5px;
-    height: 86px;
+    top: -55px;
+    left: 17px;
+
+    width: 4px;
+    height: 68px;
     background-color: $blue;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
     transform: rotate(45deg);
   }
 
   &::after {
     content: '';
     position: absolute;
-    top: -48px;
-    left: 51px;
-    width: 268px;
+    top: -42px;
+    left: 38px;
+
+    padding-bottom: 4px;
+    width: 274px;
     height: 4px;
-    background-color: $blue;
-    border-top-left-radius: 8px;
+
+    border-top: 4px solid $blue;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 12px;
   }
 }
 
